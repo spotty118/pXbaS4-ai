@@ -1,6 +1,6 @@
 import { Logo } from '@/designSystem/layouts/NavigationLayout/components/Logo'
 import { Flex, Typography, Card } from 'antd'
-import styled from 'styled-components'
+import { useEffect, useState } from 'react'
 
 const { Text, Title } = Typography
 
@@ -9,39 +9,26 @@ type Props = {
   description?: string
 }
 
-const StyledCard = styled(Card)`
-  background: linear-gradient(145deg, #f6f8fa 0%, #e9ecef 100%);
-  border: 1px solid #e1e4e8;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-  
-  @media (max-width: 768px) {
-    padding: 16px;
-  }
-`
-
-const StyledFlex = styled(Flex)`
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
 export const AppHeader: React.FC<Props> = ({ title = 'ai', description }) => {
+  const [animate, setAnimate] = useState(false)
+
+  useEffect(() => {
+    setAnimate(true)
+  }, [])
+
   return (
-    <StyledCard>
-      <StyledFlex align="center" justify="space-between">
-        <Flex align="center">
-          <Logo height={60} style={{ marginRight: '20px' }} />
-          <Flex vertical>
-            <Title level={3} style={{ margin: 0 }}>
+    <Card className="bg-gradient-to-r from-blue-50 to-indigo-50 border border-gray-200 rounded-lg shadow-sm mb-5 transition-all duration-300 ease-in-out">
+      <Flex className="flex-col md:flex-row items-center justify-between">
+        <Flex align="center" className="mb-4 md:mb-0">
+          <Logo height={60} className="mr-5" />
+          <Flex vertical className={`transition-all duration-500 ease-in-out ${animate ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4'}`}>
+            <Title level={3} className="m-0 text-gray-800">
               {title}
             </Title>
-            {description && <Text type="secondary">{description}</Text>}
+            {description && <Text className="text-gray-600">{description}</Text>}
           </Flex>
         </Flex>
-      </StyledFlex>
-    </StyledCard>
+      </Flex>
+    </Card>
   )
 }

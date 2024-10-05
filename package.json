@@ -50,6 +50,7 @@
     "cookie": "^0.6.0",
     "dayjs": "^1.11.13",
     "express": "^4.21.0",
+    "framer-motion": "^11.11.1",
     "isbot": "^4.1.0",
     "jsonwebtoken": "8.5.1",
     "jsonwebtoken-esm": "1.0.5",
