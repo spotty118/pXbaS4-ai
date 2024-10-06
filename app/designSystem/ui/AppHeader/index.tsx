@@ -1,6 +1,5 @@
 import { Logo } from '@/designSystem/layouts/NavigationLayout/components/Logo'
 import { Flex, Typography, Card } from 'antd'
-import styled from 'styled-components'
 
 const { Text, Title } = Typography
 
@@ -9,39 +8,20 @@ type Props = {
   description?: string
 }
 
-const StyledCard = styled(Card)`
-  background: linear-gradient(145deg, #f6f8fa 0%, #e9ecef 100%);
-  border: 1px solid #e1e4e8;
-  border-radius: 8px;
-  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.05);
-  margin-bottom: 20px;
-  
-  @media (max-width: 768px) {
-    padding: 16px;
-  }
-`
-
-const StyledFlex = styled(Flex)`
-  @media (max-width: 768px) {
-    flex-direction: column;
-    align-items: center;
-  }
-`
-
 export const AppHeader: React.FC<Props> = ({ title = 'ai', description }) => {
   return (
-    <StyledCard>
-      <StyledFlex align="center" justify="space-between">
+    <Card className="bg-gradient-to-br from-gray-50 to-gray-100 border border-gray-200 rounded-lg shadow-sm mb-5">
+      <Flex align="center" justify="space-between" className="md:flex-row flex-col items-center">
         <Flex align="center">
-          <Logo height={60} style={{ marginRight: '20px' }} />
+          <Logo height={60} className="mr-5" />
           <Flex vertical>
-            <Title level={3} style={{ margin: 0 }}>
+            <Title level={3} className="m-0">
               {title}
             </Title>
             {description && <Text type="secondary">{description}</Text>}
           </Flex>
         </Flex>
-      </StyledFlex>
-    </StyledCard>
+      </Flex>
+    </Card>
   )
 }
