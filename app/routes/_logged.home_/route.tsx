@@ -92,16 +92,12 @@ export default function HomePage() {
             1. Install the application:
           </Text>
           <Text className="text-lg text-white ml-4">
-            • Ensure you have Node.js installed on your system
-          </Text>
-          <Text className="text-lg text-white ml-4">
-            • Clone the repository from our GitHub page
-          </Text>
-          <Text className="text-lg text-white ml-4">
-            • Run 'npm install' in the project directory to install dependencies
-          </Text>
-          <Text className="text-lg text-white ml-4">
-            • Run 'npm start' to launch the development server
+            <a
+              href="/INSTALL.md"
+              className="text-yellow-300 hover:text-yellow-100 underline font-bold"
+            >
+              Click here for our detailed installation guide
+            </a>
           </Text>
           <Text className="text-lg text-white">
             2. Create a new application:
