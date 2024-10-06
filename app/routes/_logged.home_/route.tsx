@@ -89,7 +89,22 @@ export default function HomePage() {
         </Title>
         <div className="flex flex-col gap-4">
           <Text className="text-lg text-white">
-            1. Create a new application:
+            1. Install the application:
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Ensure you have Node.js installed on your system
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Clone the repository from our GitHub page
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Run 'npm install' in the project directory to install dependencies
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Run 'npm start' to launch the development server
+          </Text>
+          <Text className="text-lg text-white">
+            2. Create a new application:
           </Text>
           <Text className="text-lg text-white ml-4">
             • Click on "Create New Application"
@@ -101,7 +116,7 @@ export default function HomePage() {
             • Our AI will generate the initial code based on your description
           </Text>
           <Text className="text-lg text-white">
-            2. Customize your application:
+            3. Customize your application:
           </Text>
           <Text className="text-lg text-white ml-4">
             • Review the generated code
@@ -114,7 +129,7 @@ export default function HomePage() {
             • Utilize AI-powered features for code optimization and bug fixing
           </Text>
           <Text className="text-lg text-white">
-            3. Manage your applications:
+            4. Manage your applications:
           </Text>
           <Text className="text-lg text-white ml-4">
             • Access your applications through the "My Applications" section
@@ -125,7 +140,7 @@ export default function HomePage() {
           <Text className="text-lg text-white ml-4">
             • View and analyze application logs for troubleshooting
           </Text>
-          <Text className="text-lg text-white">4. Deploy and scale:</Text>
+          <Text className="text-lg text-white">5. Deploy and scale:</Text>
           <Text className="text-lg text-white ml-4">
             • Deploy your application with a single click to secure Docker
             containers
@@ -134,7 +149,7 @@ export default function HomePage() {
             • Easily scale your application as your user base grows
           </Text>
           <Text className="text-lg text-white">
-            5. Collaborate and get support:
+            6. Collaborate and get support:
           </Text>
           <Text className="text-lg text-white ml-4">
             • Invite team members to collaborate on your projects
