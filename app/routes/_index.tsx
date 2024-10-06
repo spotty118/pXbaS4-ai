@@ -145,20 +145,36 @@ export default function LandingPage() {
 
   const questionAnswers = [
     {
+      question: `What are the system requirements for using this platform?`,
+      answer: `Our platform is web-based, so you only need a modern web browser (like Chrome, Firefox, or Safari) and a stable internet connection. We recommend at least 4GB of RAM and a dual-core processor for optimal performance.`,
+    },
+    {
+      question: `How do I get started with creating my first application?`,
+      answer: `Getting started is easy! After signing up, click on 'Create New Application' from your dashboard. You'll be guided through a step-by-step process where you can describe your app idea. Our AI will then generate the initial code, which you can review and customize.`,
+    },
+    {
       question: `Do I need coding experience to use this platform?`,
-      answer: `Not at all! Our AI-powered platform is designed to be user-friendly for individuals with no coding experience. Simply describe your app idea, and our system will generate the code for you.`,
+      answer: `Not at all! Our AI-powered platform is designed to be user-friendly for individuals with no coding experience. Simply describe your app idea, and our system will generate the code for you. However, if you do have coding skills, you can dive deeper into customization.`,
     },
     {
       question: `How secure are the applications created on your platform?`,
-      answer: `Security is our top priority. All applications are deployed in secure Docker containers, ensuring isolation and protection. We also implement industry-standard security practices throughout our development process.`,
+      answer: `Security is our top priority. All applications are deployed in secure Docker containers, ensuring isolation and protection. We implement industry-standard security practices, including encryption of data in transit and at rest, regular security audits, and compliance with GDPR and other data protection regulations.`,
     },
     {
       question: `Can I customize the AI-generated code?`,
-      answer: `Absolutely! While our AI generates the initial code, you have full access to modify and customize it according to your specific needs. Our platform supports both AI-assisted and manual coding.`,
+      answer: `Absolutely! While our AI generates the initial code, you have full access to modify and customize it according to your specific needs. Our platform supports both AI-assisted and manual coding. We also provide an intuitive interface for non-coders to make basic customizations.`,
     },
     {
       question: `What kind of support do you offer?`,
-      answer: `We offer various levels of support depending on your plan. This ranges from community support for our Starter plan to 24/7 premium support with a dedicated account manager for our Enterprise customers.`,
+      answer: `We offer various levels of support depending on your plan. This ranges from community support and extensive documentation for our Starter plan users, to priority email support for Pro users, and 24/7 premium support with a dedicated account manager for our Enterprise customers. We also provide regular webinars and tutorials to help you make the most of our platform.`,
+    },
+    {
+      question: `Can I collaborate with my team on this platform?`,
+      answer: `Yes, collaboration is a key feature of our platform. You can invite team members to your projects, assign roles and permissions, and work together in real-time. Our version control system ensures that all changes are tracked and can be easily managed.`,
+    },
+    {
+      question: `How does the pricing work for apps I create?`,
+      answer: `Our pricing is based on the plan you choose (Starter, Pro, or Enterprise) and not on the number of apps you create. You can create and deploy as many apps as your plan allows without additional app-specific charges. However, there may be additional costs for high-traffic apps that require more server resources.`,
     },
   ]
 

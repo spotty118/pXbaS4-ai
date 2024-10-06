@@ -1,16 +1,15 @@
-import React from 'react'
-import { Typography, Button } from 'antd'
-import {
-  PlusOutlined,
-  AppstoreOutlined,
-  InfoCircleOutlined,
-} from '@ant-design/icons'
-const { Title, Text } = Typography
 import { useUserContext } from '@/core/context'
-import { useNavigate } from '@remix-run/react'
 import { Api } from '@/core/trpc'
 import { PageLayout } from '@/designSystem'
 import { AppHeader } from '@/designSystem/ui/AppHeader'
+import {
+  AppstoreOutlined,
+  InfoCircleOutlined,
+  PlusOutlined,
+} from '@ant-design/icons'
+import { useNavigate } from '@remix-run/react'
+import { Button, Typography } from 'antd'
+const { Title, Text } = Typography
 
 export default function HomePage() {
   const navigate = useNavigate()
@@ -29,7 +28,10 @@ export default function HomePage() {
 
   return (
     <PageLayout layout="narrow">
-      <AppHeader title="Welcome to Our Platform" description="Create and manage your applications with ease. Get started by creating a new application or view your existing ones." />
+      <AppHeader
+        title="Welcome to Our Platform"
+        description="Create and manage your applications with ease. Get started by creating a new application or view your existing ones."
+      />
 
       <div className="flex justify-center gap-4 my-8 flex-wrap">
         <div
@@ -38,11 +40,17 @@ export default function HomePage() {
         >
           <div className="flex flex-col items-center justify-between h-full">
             <PlusOutlined className="text-6xl mb-4" />
-            <Title level={3} className="font-bold text-white">Create New Application</Title>
+            <Title level={3} className="font-bold text-white">
+              Create New Application
+            </Title>
             <Text className="mb-4 text-lg text-white">
               Start a new project and bring your ideas to life.
             </Text>
-            <Button type="primary" icon={<PlusOutlined />} className="mt-auto text-lg bg-white text-blue-500 hover:bg-gray-100 hover:text-purple-600 border-none font-bold">
+            <Button
+              type="primary"
+              icon={<PlusOutlined />}
+              className="mt-auto text-lg bg-white text-blue-500 hover:bg-gray-100 hover:text-purple-600 border-none font-bold"
+            >
               Create Application
             </Button>
           </div>
@@ -53,7 +61,9 @@ export default function HomePage() {
         >
           <div className="flex flex-col items-center justify-between h-full">
             <AppstoreOutlined className="text-6xl mb-4" />
-            <Title level={3} className="font-bold text-white">My Applications</Title>
+            <Title level={3} className="font-bold text-white">
+              My Applications
+            </Title>
             <Text className="mb-4 text-lg text-white">
               {isLoading
                 ? 'Loading...'
@@ -61,7 +71,11 @@ export default function HomePage() {
                     applications?.length !== 1 ? 's' : ''
                   }.`}
             </Text>
-            <Button type="primary" icon={<AppstoreOutlined />} className="mt-auto text-lg bg-white text-blue-500 hover:bg-gray-100 hover:text-purple-600 border-none font-bold">
+            <Button
+              type="primary"
+              icon={<AppstoreOutlined />}
+              className="mt-auto text-lg bg-white text-blue-500 hover:bg-gray-100 hover:text-purple-600 border-none font-bold"
+            >
               View Applications
             </Button>
           </div>
@@ -74,14 +88,65 @@ export default function HomePage() {
           How to Use Our Platform
         </Title>
         <div className="flex flex-col gap-4">
-          <Text className="text-lg text-white">1. Create a new application by clicking on "Create New Application".</Text>
-          <Text className="text-lg text-white">2. Fill in the required details for your application.</Text>
-          <Text className="text-lg text-white">3. Once created, you can view and manage your applications in the "My Applications" section.</Text>
-          <Text className="text-lg text-white">4. Monitor your application's performance and make updates as needed.</Text>
-          <Text className="text-lg text-white">5. If you need any assistance, visit our Help & Support page.</Text>
+          <Text className="text-lg text-white">
+            1. Create a new application:
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Click on "Create New Application"
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Describe your application idea in detail
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Our AI will generate the initial code based on your description
+          </Text>
+          <Text className="text-lg text-white">
+            2. Customize your application:
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Review the generated code
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Make adjustments using our intuitive interface or by editing the
+            code directly
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Utilize AI-powered features for code optimization and bug fixing
+          </Text>
+          <Text className="text-lg text-white">
+            3. Manage your applications:
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Access your applications through the "My Applications" section
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Monitor performance metrics and resource usage in real-time
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • View and analyze application logs for troubleshooting
+          </Text>
+          <Text className="text-lg text-white">4. Deploy and scale:</Text>
+          <Text className="text-lg text-white ml-4">
+            • Deploy your application with a single click to secure Docker
+            containers
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Easily scale your application as your user base grows
+          </Text>
+          <Text className="text-lg text-white">
+            5. Collaborate and get support:
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Invite team members to collaborate on your projects
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Access our comprehensive documentation and community forums
+          </Text>
+          <Text className="text-lg text-white ml-4">
+            • Contact our support team for personalized assistance
+          </Text>
         </div>
       </div>
     </PageLayout>
   )
 }
-
